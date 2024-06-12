@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: security-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/security_db
+    username: postgres
+    password: ajladatabase
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  cloud:
+    config:
+      enabled: false
+
+server:
+  port: 0
+eureka:
+  client:
+    enabled: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
+jwt:
+  secret: 8b04b8db0cbadcc8efaafde118448756d7f348ecb283e6bde10fd2bbeda7779a
+  ExpirationTime: 36000000
+
+logging:
+  level:
+    org.hibernate: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+
+allowed:
+  ip: 192.168.1.7

@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: com.etf.model.PacijentTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.006 s <<< FAILURE! -- in com.etf.model.PacijentTest
+com.etf.model.PacijentTest -- Time elapsed: 0.006 s <<< ERROR!
+javax.validation.NoProviderFoundException: Unable to create a Configuration, because no Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:291)
+	at javax.validation.Validation.buildDefaultValidatorFactory(Validation.java:103)
+	at com.etf.model.PacijentTest.createValidator(PacijentTest.java:29)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "javax.validation.ValidatorFactory.close()" because "com.etf.model.PacijentTest.validatorFactory" is null
+		at com.etf.model.PacijentTest.close(PacijentTest.java:35)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+		at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1116)
+		... 1 more
+
