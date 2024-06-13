@@ -25,8 +25,8 @@ public class MapperConfig {
     mailSender.setHost("smtp.gmail.com");
     mailSender.setPort(465);
     
-    mailSender.setUsername("");
-    mailSender.setPassword("");
+    mailSender.setUsername("viscaajla@gmail.com");
+    mailSender.setPassword("fkjg mnjn yvtm pnjk");
     
     java.util.Properties props = mailSender.getJavaMailProperties();
     props.put("mail.transport.protocol", "smtp");
